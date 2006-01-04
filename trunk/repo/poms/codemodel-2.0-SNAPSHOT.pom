@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
   <pomVersion>3</pomVersion>
-  <groupId>codedom</groupId>
+  <groupId>codemodel</groupId>
   <artifactId>codemodel</artifactId>
   <currentVersion>${version}</currentVersion>
   
