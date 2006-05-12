@@ -1,0 +1,67 @@
+<project>
+  <pomVersion>3</pomVersion>
+  <groupId>com.sun.codemodel</groupId>
+  <artifactId>codemodel</artifactId>
+  <currentVersion>2.0-SNAPSHOT</currentVersion>
+  <shortDescription>Java source code generation library</shortDescription>
+  <description>Java source code generation library</description>
+  <issueTrackingUrl>https://codemodel.dev.java.net/servlets/ProjectIssues</issueTrackingUrl>
+  <mailingLists>
+    <mailingList>
+      <name>Users List</name>
+      <subscribe>users-subscribe@codemodel.dev.java.net</subscribe>
+      <unsubscribe>users-unsubscribe@codemodel.dev.java.net</unsubscribe>
+      <archive>https://codemodel.dev.java.net/servlets/SummarizeList?listName=users</archive>
+    </mailingList>
+    <mailingList>
+      <name>Issues List</name>
+      <subscribe>issues-subscribe@codemodel.dev.java.net</subscribe>
+      <unsubscribe>issues-unsubscribe@codemodel.dev.java.net</unsubscribe>
+      <archive>https://codemodel.dev.java.net/servlets/SummarizeList?listName=issues</archive>
+    </mailingList>
+    <mailingList>
+      <name>Commits List</name>
+      <subscribe>commits-subscribe@codemodel.dev.java.net</subscribe>
+      <unsubscribe>commits-unsubscribe@codemodel.dev.java.net</unsubscribe>
+      <archive>https://codemodel.dev.java.net/servlets/SummarizeList?listName=commits</archive>
+    </mailingList>
+  </mailingLists>
+  <developers>
+    <developer>
+      <id>kohsuke</id>
+      <name>Kohsuke Kawaguchi</name>
+      <email>kohsuke.kawaguchi@sun.com</email>
+    </developer>
+    <developer>
+      <id>ryans</id>
+      <name>Ryan Shoemaker</name>
+      <email>ryan.shoemaker@sun.com</email>
+    </developer>
+    <developer>
+      <id>bhakti</id>
+      <name>Bhakti Mehta</name>
+      <email>bhakti.mehta@sun.com</email>
+    </developer>
+  </developers>
+  <reports>
+    <report>maven-license-plugin</report>
+    <report>maven-changes-plugin</report>
+    <report>maven-javadoc-plugin</report>
+    <report>maven-junit-report-plugin</report>
+    <report>maven-linkcheck-plugin</report>
+  </reports>
+  <repository>
+    <connection>scm:svn:https://guest@codemodel.dev.java.net/svn/codemodel</connection>
+    <developerConnection>scm:svn:https://codemodel.dev.java.net/svn/codemodel</developerConnection>
+    <url>https://codemodel.dev.java.net/source/browse/codemodel</url>
+  </repository>
+  <organization>
+    <name>Sun Microsystems</name>
+    <url>http://www.sun.com/</url>
+  </organization>
+  <package>com.sun.codemodel</package>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <unitTest />
+  </build>
+</project>
