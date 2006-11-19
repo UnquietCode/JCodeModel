@@ -77,6 +77,108 @@ public final class JAnnotationUse extends JAnnotationValue {
         addValue(name, new JAnnotationStringValue(JExpr.lit(value)));
         return this;
     }
+    
+    /**
+     * Adds a member value pair to this annotation
+     * @param name
+     *        The simple name for this annotation
+     *
+     * @param value
+     *        The byte member value for this annotation
+     * @return
+     *         The JAnnotationUse. More member value pairs can
+     *         be added to it using the same or the overloaded methods.
+     *
+     */
+    public JAnnotationUse param(String name, byte value){
+        addValue(name, new JAnnotationStringValue(JExpr.lit(value)));
+        return this;
+    }
+    
+    /**
+     * Adds a member value pair to this annotation
+     * @param name
+     *        The simple name for this annotation
+     *
+     * @param value
+     *        The char member value for this annotation
+     * @return
+     *         The JAnnotationUse. More member value pairs can
+     *         be added to it using the same or the overloaded methods.
+     *
+     */
+    public JAnnotationUse param(String name, char value){
+        addValue(name, new JAnnotationStringValue(JExpr.lit(value)));
+        return this;
+    }
+    
+    /**
+     * Adds a member value pair to this annotation
+     * @param name
+     *        The simple name for this annotation
+     *
+     * @param value
+     *        The double member value for this annotation
+     * @return
+     *         The JAnnotationUse. More member value pairs can
+     *         be added to it using the same or the overloaded methods.
+     *
+     */
+    public JAnnotationUse param(String name, double value){
+        addValue(name, new JAnnotationStringValue(JExpr.lit(value)));
+        return this;
+    }
+    
+    /**
+     * Adds a member value pair to this annotation
+     * @param name
+     *        The simple name for this annotation
+     *
+     * @param value
+     *        The float member value for this annotation
+     * @return
+     *         The JAnnotationUse. More member value pairs can
+     *         be added to it using the same or the overloaded methods.
+     *
+     */
+    public JAnnotationUse param(String name, float value){
+        addValue(name, new JAnnotationStringValue(JExpr.lit(value)));
+        return this;
+    }
+    
+    /**
+     * Adds a member value pair to this annotation
+     * @param name
+     *        The simple name for this annotation
+     *
+     * @param value
+     *        The long member value for this annotation
+     * @return
+     *         The JAnnotationUse. More member value pairs can
+     *         be added to it using the same or the overloaded methods.
+     *
+     */
+    public JAnnotationUse param(String name, long value){
+        addValue(name, new JAnnotationStringValue(JExpr.lit(value)));
+        return this;
+    }
+    
+    /**
+     * Adds a member value pair to this annotation
+     * @param name
+     *        The simple name for this annotation
+     *
+     * @param value
+     *        The short member value for this annotation
+     * @return
+     *         The JAnnotationUse. More member value pairs can
+     *         be added to it using the same or the overloaded methods.
+     *
+     */
+    public JAnnotationUse param(String name, short value){
+        addValue(name, new JAnnotationStringValue(JExpr.lit(value)));
+        return this;
+    }
 
     /**
      * Adds a member value pair to this annotation

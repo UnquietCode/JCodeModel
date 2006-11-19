@@ -49,7 +49,7 @@ public abstract class AbsractCodeModelTest extends TestCase {
 	protected abstract void generate(JCodeModel codeModel) throws Exception;
 
 	protected void check() throws Exception {
-		FileUtils.contentsEqual(target, test, true);
+		assertTrue(FileUtils.contentsEqual(target, test, true));
 	}
 
 	public Class getTestClass() {

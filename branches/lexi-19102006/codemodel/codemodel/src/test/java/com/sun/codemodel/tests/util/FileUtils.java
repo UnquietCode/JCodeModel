@@ -110,8 +110,8 @@ public class FileUtils {
 		if (f1 == null || f2 == null)
 			return false;
 
-		if (f1.exists() != f2.exists() && f1.isFile() != f2.isFile()
-				&& f1.isDirectory() != f2.isDirectory())
+		if (f1.exists() != f2.exists() || f1.isFile() != f2.isFile()
+				|| f1.isDirectory() != f2.isDirectory())
 			return false;
 
 		if (!f1.exists())
