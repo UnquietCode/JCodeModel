@@ -193,8 +193,14 @@ public final class JAnnotationUse extends JAnnotationValue {
       *
       *
       */
-     public JAnnotationUse param(String name, Class value){
-         addValue(name, new JAnnotationStringValue(JExpr.lit(value.getName())));
+     public JAnnotationUse param(String name, final Class value){
+         addValue(name, new JAnnotationStringValue(
+        		 new JExpressionImpl() {
+        			 public void generate(JFormatter f) {
+        				 f.p(value.getName().replace('$', '.'));
+        				 f.p(".class");
+        			}
+        		 }));
          return this;
     }
 

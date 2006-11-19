@@ -87,8 +87,14 @@ public final class JAnnotationArrayMember extends JAnnotationValue implements JA
         return this;
     }
 
-    public JAnnotationArrayMember param(Class value){
-       JAnnotationValue annotationValue = new JAnnotationStringValue(JExpr.lit(value.getName()));
+    public JAnnotationArrayMember param(final Class value){
+       JAnnotationValue annotationValue = new JAnnotationStringValue(
+    		   new JExpressionImpl() {
+      			 public void generate(JFormatter f) {
+      				 f.p(value.getName().replace('$', '.'));
+      				 f.p(".class");
+      			}
+      		 });
        values.add(annotationValue);
        return this;
    }
