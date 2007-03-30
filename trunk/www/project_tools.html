@@ -1,0 +1,61 @@
+</dd><dd id="eraser"></dd>
+<script>
+  // get to the block
+  var eraser = document.getElementById("eraser");
+
+  // delete the "get involved" block
+  for( n=eraser.parentNode.previousSibling; n!=null; n=n.previousSibling ) {
+    if(n.nodeType==1) { // if element
+      if(n.tagName=="DL") {
+        n.style.display = "none";
+      }
+    }
+  }
+
+  // hide all default navigation bars
+  var dd = eraser;
+  for( n=dd; n!=null; n=n.previousSibling ) {
+    if(n.nodeType==1) { // if element
+      if(n.tagName=="DD") { // kill all the link items
+        n.style.display = "none";
+      }
+      if(n.tagName=="DT") { // change the title
+        n.innerHTML = "Hudson project";
+      }
+    }
+  }
+</script>
+
+
+
+<dd>
+  <ul>
+    <li>
+      <a href="/">Project home</a>
+    <li>
+      <a href="https://maven2-repository.dev.java.net/source/browse/maven2-repository/trunk/www/repository/com/sun/codemodel/codemodel/">Downloads</a>
+    <li>
+      <a href="/servlets/ProjectMemberList">Membership</a>
+  </ul>
+<dd>
+  <ul>
+    <li>
+      <a href="/servlets/ProjectMailingListList">Mailing lists</a>
+    <li>
+      <a href="/source/browse/codemodel/trunk/codemodel/codemodel/">Source code</a>
+    <li>
+      <a href="/servlets/ProjectIssues">Issue tracker</a>
+    <li>
+      <form name="ProjectIssuesForm" method="get" action="/issues/show_bug.cgi">
+        <input type="submit" value="Go to" /> # <input name="id" size="3" />
+      </form>
+  </ul>
+
+
+
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1593133-1";
+urchinTracker();
+</script>
