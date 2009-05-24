@@ -1,5 +1,5 @@
 -classpath
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/target/classes:/home/lexi/var/data/repository/com/sun/codemodel/codemodel/2.2-SNAPSHOT/codemodel-2.2-SNAPSHOT.jar:/home/lexi/var/data/repository/ant/ant/1.5/ant-1.5.jar'
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/target/classes:/home/lexi/var/data/repository/com/sun/codemodel/codemodel/2.2/codemodel-2.2.jar:/home/lexi/var/data/repository/ant/ant/1.5/ant-1.5.jar'
 -encoding
 'ISO8859-1'
 -protected
@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Annotation Compiler 2.2-SNAPSHOT API'
+'Codemodel Annotation Compiler 2.2 API'
 -linkoffline
 'https://codemodel.dev.java.net/codemodel/apidocs' '/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/site/apidocs'
 -use
 -version
 -windowtitle
-'Codemodel Annotation Compiler 2.2-SNAPSHOT API'
+'Codemodel Annotation Compiler 2.2 API'
