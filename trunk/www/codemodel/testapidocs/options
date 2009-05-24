@@ -1,5 +1,5 @@
 -classpath
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/classes:/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/test-classes:/home/lexi/var/data/repository/junit/junit/3.8/junit-3.8.jar'
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/classes:/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/test-classes:/home/lexi/var/data/repository/junit/junit/3.8.1/junit-3.8.1.jar'
 -encoding
 'ISO8859-1'
 -protected
@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Core 2.2-SNAPSHOT Test API'
+'Codemodel Core 2.2 Test API'
 -link
 '../apidocs'
 -use
 -version
 -windowtitle
-'Codemodel Core 2.2-SNAPSHOT Test API'
+'Codemodel Core 2.2 Test API'
