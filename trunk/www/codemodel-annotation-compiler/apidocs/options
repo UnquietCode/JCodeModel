@@ -1,0 +1,24 @@
+-classpath
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/target/classes:/home/lexi/var/data/repository/com/sun/codemodel/codemodel/2.2-SNAPSHOT/codemodel-2.2-SNAPSHOT.jar:/home/lexi/var/data/repository/ant/ant/1.5/ant-1.5.jar'
+-encoding
+'ISO8859-1'
+-protected
+-sourcepath
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2005-2009 <a href="http://www.sun.com/">Sun Microsystems</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Codemodel Annotation Compiler 2.2-SNAPSHOT API'
+-linkoffline
+'https://codemodel.dev.java.net/codemodel/apidocs' '/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/site/apidocs'
+-use
+-version
+-windowtitle
+'Codemodel Annotation Compiler 2.2-SNAPSHOT API'
