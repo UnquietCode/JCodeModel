@@ -7,7 +7,7 @@
 '/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/src/main/java:/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/src/main/javadoc'
 -author
 -bottom
-'Copyright &#169; 2005-2009 <a href="http://www.sun.com/">Sun Microsystems</a>. All Rights Reserved.'
+'Copyright &#169; 2005-2010 <a href="http://www.sun.com/">Sun Microsystems</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
@@ -15,8 +15,8 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Core 2.2 API'
+'Codemodel Core 2.3-SNAPSHOT API'
 -use
 -version
 -windowtitle
-'Codemodel Core 2.2 API'
+'Codemodel Core 2.3-SNAPSHOT API'
