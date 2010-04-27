@@ -7,7 +7,7 @@
 '/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/src/main/java'
 -author
 -bottom
-'Copyright &#169; 2005-2009 <a href="http://www.sun.com/">Sun Microsystems</a>. All Rights Reserved.'
+'Copyright &#169; 2005-2010 <a href="http://www.sun.com/">Sun Microsystems</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Annotation Compiler 2.2 API'
+'Codemodel Annotation Compiler 2.3-SNAPSHOT API'
 -linkoffline
 'https://codemodel.dev.java.net/codemodel/apidocs' '/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/site/apidocs'
 -use
 -version
 -windowtitle
-'Codemodel Annotation Compiler 2.2 API'
+'Codemodel Annotation Compiler 2.3-SNAPSHOT API'
