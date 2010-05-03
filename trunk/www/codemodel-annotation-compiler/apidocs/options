@@ -1,5 +1,5 @@
 -classpath
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/target/classes:/home/lexi/var/data/repository/com/sun/codemodel/codemodel/2.2/codemodel-2.2.jar:/home/lexi/var/data/repository/ant/ant/1.5/ant-1.5.jar'
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel-annotation-compiler/target/classes:/home/lexi/var/data/repository/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar:/home/lexi/var/data/repository/org/apache/ant/ant/1.7.0/ant-1.7.0.jar:/home/lexi/var/data/repository/com/sun/codemodel/codemodel/2.2/codemodel-2.2.jar:/home/lexi/usr/local/java/jdk1.5.0/jre/../lib/tools.jar:/home/lexi/var/data/repository/com/sun/istack/istack-commons-tools/2.2/istack-commons-tools-2.2.jar:/home/lexi/var/data/repository/ant/ant/1.5/ant-1.5.jar'
 -encoding
 'ISO8859-1'
 -protected
