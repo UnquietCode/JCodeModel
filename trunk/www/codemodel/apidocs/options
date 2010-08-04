@@ -1,26 +1,22 @@
 -classpath
-'C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel/target/classes'
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/classes'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel/src/main/java;C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel/src/main/javadoc'
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/src/main/java:/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/src/main/javadoc'
 -author
 -bottom
 'Copyright &#169; 2005-2010 <a href="http://www.sun.com/">Sun Microsystems</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel/target/site/apidocs'
+'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Core 2.3 API'
--link
-'http://java.sun.com/j2se/1.5.0/docs/api'
--linkoffline
-'https://codemodel.dev.java.net/codemodel-annotation-compiler/apidocs' 'C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel-annotation-compiler/target/site/apidocs'
+'Codemodel Core 2.4-SNAPSHOT API'
 -use
 -version
 -windowtitle
-'Codemodel Core 2.3 API'
+'Codemodel Core 2.4-SNAPSHOT API'
