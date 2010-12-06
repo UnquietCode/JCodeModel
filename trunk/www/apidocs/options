@@ -1,24 +1,24 @@
 -classpath
-'C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/target/classes;C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel/target/classes;C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel-annotation-compiler/target/classes;C:/Repository/com/sun/codemodel/codemodel/2.3/codemodel-2.3.jar;C:/Repository/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar;C:/Repository/com/sun/istack/istack-commons-tools/2.2/istack-commons-tools-2.2.jar;C:/Programme/Java/jdk1.6.0_14/jre/../lib/tools.jar;C:/Repository/org/apache/ant/ant/1.7.0/ant-1.7.0.jar'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/target/classes:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/classes:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel-annotation-compiler/target/classes:/space/hudson/.m2/repository/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar:/space/hudson/.m2/repository/org/apache/ant/ant/1.7.0/ant-1.7.0.jar:/space/hudson/.m2/repository/com/sun/codemodel/codemodel/2.4/codemodel-2.4.jar:/usr/jdk/instances/jdk1.5.0/jre/../lib/tools.jar:/space/hudson/.m2/repository/com/sun/istack/istack-commons-tools/2.2/istack-commons-tools-2.2.jar'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel/src/main/java;C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel/src/main/javadoc;C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/codemodel-annotation-compiler/src/main/java'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/src/main/java:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/src/main/javadoc:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel-annotation-compiler/src/main/java'
 -author
 -bottom
-'Copyright &#169; 2005-2010 <a href="http://www.sun.com/">Sun Microsystems</a>. All Rights Reserved.'
+'Copyright &#169; 2005-2010 <a href="http://www.oracle.com/">Oracle</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'C:/Projects/dev.java.net/codemodel/codemodel/target/checkout/target/site/apidocs'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel 2.3 API'
+'Codemodel 2.4 API'
 -link
 'http://java.sun.com/j2se/1.5.0/docs/api'
 -use
 -version
 -windowtitle
-'Codemodel 2.3 API'
+'Codemodel 2.4 API'
