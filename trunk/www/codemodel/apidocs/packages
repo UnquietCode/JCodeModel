@@ -1,4 +1,4 @@
 com.sun.codemodel
-com.sun.codemodel.util
-com.sun.codemodel.fmt
 com.sun.codemodel.writer
+com.sun.codemodel.fmt
+com.sun.codemodel.util

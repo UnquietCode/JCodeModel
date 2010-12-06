@@ -1,22 +1,26 @@
 -classpath
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/classes'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/classes'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/src/main/java:/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/src/main/javadoc'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/src/main/java:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/src/main/javadoc'
 -author
 -bottom
 'Copyright &#169; 2005-2010 <a href="http://www.oracle.com/">Oracle</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/site/apidocs'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Core 2.4-SNAPSHOT API'
+'Codemodel Core 2.4 API'
+-link
+'http://java.sun.com/j2se/1.5.0/docs/api'
+-linkoffline
+'http://codemodel.java.net/codemodel-annotation-compiler/apidocs' '/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel-annotation-compiler/target/site/apidocs'
 -use
 -version
 -windowtitle
-'Codemodel Core 2.4-SNAPSHOT API'
+'Codemodel Core 2.4 API'

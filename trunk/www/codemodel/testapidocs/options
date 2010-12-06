@@ -1,24 +1,24 @@
 -classpath
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/classes:/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/test-classes:/home/lexi/var/data/repository/junit/junit/4.8.1/junit-4.8.1.jar'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/classes:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/test-classes:/space/hudson/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/src/test/java'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/src/test/java'
 -author
 -bottom
 'Copyright &#169; 2005-2010 <a href="http://www.oracle.com/">Oracle</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'/home/lexi/var/data/hudson/jobs/codemodel-trunk-1.5-site/workspace/codemodel/codemodel/target/site/testapidocs'
+'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/site/testapidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Core 2.4-SNAPSHOT Test API'
+'Codemodel Core 2.4 Test API'
 -link
-'../apidocs'
+'http://java.sun.com/j2se/1.5.0/docs/api'
 -use
 -version
 -windowtitle
-'Codemodel Core 2.4-SNAPSHOT Test API'
+'Codemodel Core 2.4 Test API'
