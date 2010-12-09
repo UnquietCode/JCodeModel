@@ -71,7 +71,7 @@ var info = {
 title: "Codemodel"
 }
     </script>
-    <script src="http://glassfish-theming.java.net/zone-core.js"></script>
+    <script src="http://glassfish-theming.java.net/zone-ws.js"></script>
     <script src="http://glassfish-theming.java.net/theme.js"></script><!--
 If your project uses a site traffic tracker like Google Analytics, this is a good place
 to inject it.
