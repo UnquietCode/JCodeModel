@@ -1,4 +1,4 @@
-<div id="main">
+<div id="navcol">
 <dl id="projecttools" class="navgroup" style="text-align: left;">
  <dt id="current-zone" class="depth0">
  <a href="http://codemodel.java.net/">Codemodel</a>
