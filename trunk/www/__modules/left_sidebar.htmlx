@@ -4,24 +4,9 @@
  <a href="http://codemodel.java.net/">Codemodel</a>
  </dt>
  <dd class="depth0 parent parent" id="menubar">
-<!--
-DD contains single UL which generates the whole menu. UL/LI can have a nested structure
-to create submenus.
--->
-<!--    <ul>  -->
-<!-- menubar for the main site -->
+<!-- main menubar -->
       <ul id="main-menubar">
-        <li><!--
-This HTML is injected in all the pages within your project, so all the hyperlinks
-must be either absolute or start with '/'.
-The current page in the navigation bar is shown highlighted to let users know where
-he/she is. This is primarily done by the exact match between "window.location.href"
-and the link target, but the A tag can also have the optional "match" attribute,
-whose value is regular expression that indicates what pages the link should highlight.
-For example, the following match attribute says "overview" should be the current
-page even if you are in sub.html. This is useful for grouping a large number of pages
-under a single navigation item.
--->
+        <li>
           <a href="http://codemodel.java.net" match="/|/sub.html">Overview</a>
         </li>
         <li> <a href="http://download.java.net/maven/2/com/sun/codemodel/">Downloads
@@ -96,8 +81,3 @@ to inject it.
 _uacct = "UA-20053425-1";
 urchinTracker();
 </script>
---><!--</dd>
-</dl>
-</div>
-</body>
-</html>-->
