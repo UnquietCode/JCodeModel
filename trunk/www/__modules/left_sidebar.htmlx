@@ -20,7 +20,7 @@ logo: "http://jersey.java.net/images/Jersey_yellow.png"
 }
 </script>
 
-<div id="navcol">
+<div id="main">
 <dl id="projecttools" class="navgroup" style="text-align: left;">
  <dt id="current-zone" class="depth0">
  <a href="http://codemodel.java.net/">Codemodel</a>
