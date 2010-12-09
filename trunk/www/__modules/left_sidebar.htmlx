@@ -15,7 +15,8 @@ top of the file. This is how it should be, due to the place where this gets inje
 -->
 <script>
 var info = {
-title: "Codemodel"
+title: "Codemodel",
+logo: "http://jersey.java.net/images/Jersey_yellow.png"
 }
 </script>
 
@@ -95,7 +96,7 @@ GSearch.setOnLoadCallback(OnLoad);
         <li> <a href="mailto:users@codemodel.java.net">Feedback/Questions?</a></li>
         <li><a href="http://java.net/projects/codemodel/roles">Membership</a></li>
         <li> <a href="http://codemodel.java.net/public/contribute.html">Join
-Project Shoal</a></li>
+Project Codemodel</a></li>
       </ul>
     </ul>
 <!--
