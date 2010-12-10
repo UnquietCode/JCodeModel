@@ -58,8 +58,6 @@ GSearch.setOnLoadCallback(OnLoad);
           </script><!-- Google CSE Code ends --></li>
         <li> <a href="mailto:users@codemodel.java.net">Feedback/Questions?</a></li>
         <li><a href="http://java.net/projects/codemodel/roles">Membership</a></li>
-        <li> <a href="http://codemodel.java.net/public/contribute.html">Join
-Project Codemodel</a></li>
       </ul>
     </ul>
 <!--
