@@ -1,26 +1,26 @@
 -classpath
-'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel-annotation-compiler/target/classes:/space/hudson/.m2/repository/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar:/space/hudson/.m2/repository/org/apache/ant/ant/1.7.0/ant-1.7.0.jar:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/codemodel-2.4.jar:/usr/jdk/instances/jdk1.5.0/jre/../lib/tools.jar:/space/hudson/.m2/repository/com/sun/istack/istack-commons-tools/2.2/istack-commons-tools-2.2.jar'
+'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel-annotation-compiler/target/classes;C:/Users/ljungman/.m2/repository/org/apache/ant/ant-launcher/1.7.0/ant-launcher-1.7.0.jar;C:/Users/ljungman/.m2/repository/org/apache/ant/ant/1.7.0/ant-1.7.0.jar;D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel/target/codemodel-2.5.jar;d:/Java/sdk/jdk1.5.0_22/jre/../lib/tools.jar;C:/Users/ljungman/.m2/repository/com/sun/istack/istack-commons-tools/2.5/istack-commons-tools-2.5.jar'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel-annotation-compiler/src/main/java'
+'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel-annotation-compiler/src/main/java'
 -author
 -bottom
-'Copyright &#169; 2005-2010 <a href="http://www.oracle.com/">Oracle</a>. All Rights Reserved.'
+'Copyright &#169; 2005-2011 <a href="http://www.oracle.com/">Oracle</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel-annotation-compiler/target/site/apidocs'
+'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel-annotation-compiler/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Annotation Compiler 2.4 API'
--link
-'http://java.sun.com/j2se/1.5.0/docs/api'
+'Codemodel Annotation Compiler 2.5 API'
 -linkoffline
-'http://codemodel.java.net/codemodel/apidocs' '/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/site/apidocs'
+'http://download.oracle.com/javase/1.5.0/docs/api' 'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel-annotation-compiler/target/javadoc-bundle-options'
+-linkoffline
+'http://codemodel.java.net/codemodel/apidocs' 'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel/target/site/apidocs'
 -use
 -version
 -windowtitle
-'Codemodel Annotation Compiler 2.4 API'
+'Codemodel Annotation Compiler 2.5 API'

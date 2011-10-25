@@ -1,26 +1,24 @@
 -classpath
-'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/classes'
+'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel/target/classes'
 -encoding
 'UTF-8'
 -protected
 -sourcepath
-'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/src/main/java:/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/src/main/javadoc'
+'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel/src/main/java;D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel/src/main/javadoc'
 -author
 -bottom
-'Copyright &#169; 2005-2010 <a href="http://www.oracle.com/">Oracle</a>. All Rights Reserved.'
+'Copyright &#169; 2005-2011 <a href="http://www.oracle.com/">Oracle</a>. All Rights Reserved.'
 -charset
 'UTF-8'
 -d
-'/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel/target/site/apidocs'
+'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel/target/site/apidocs'
 -docencoding
 'UTF-8'
 -doctitle
-'Codemodel Core 2.4 API'
--link
-'http://java.sun.com/j2se/1.5.0/docs/api'
+'Codemodel Core 2.5 API'
 -linkoffline
-'http://codemodel.java.net/codemodel-annotation-compiler/apidocs' '/space/hudson/workspace/codemodel-release/codemodel/target/checkout/codemodel-annotation-compiler/target/site/apidocs'
+'http://download.oracle.com/javase/1.5.0/docs/api' 'D:/svn/codemodel/trunk/codemodel/target/checkout/codemodel/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'Codemodel Core 2.4 API'
+'Codemodel Core 2.5 API'
