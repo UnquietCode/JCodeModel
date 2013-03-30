@@ -1,0 +1,245 @@
+
+# /tags/2.3/
+/tags/2.3/target
+/tags/2.3/velocity.log
+/tags/2.3/*.iws
+/tags/2.3/.DS_Store
+/tags/2.3/*.iml
+/tags/2.3/*.ipr
+
+# /tags/2.3/codemodel/
+/tags/2.3/codemodel/target
+/tags/2.3/codemodel/*.iml
+/tags/2.3/codemodel/codemodel.ipr
+/tags/2.3/codemodel/codemodel.iws
+
+# /tags/2.3/codemodel-annotation-compiler/
+/tags/2.3/codemodel-annotation-compiler/target
+/tags/2.3/codemodel-annotation-compiler/velocity.log
+/tags/2.3/codemodel-annotation-compiler/*.iml
+
+# /tags/2.4.1/
+/tags/2.4.1/target
+/tags/2.4.1/velocity.log
+/tags/2.4.1/*.iws
+/tags/2.4.1/.DS_Store
+/tags/2.4.1/*.iml
+/tags/2.4.1/*.ipr
+
+# /tags/2.4.1/codemodel/
+/tags/2.4.1/codemodel/target
+/tags/2.4.1/codemodel/*.iml
+/tags/2.4.1/codemodel/codemodel.ipr
+/tags/2.4.1/codemodel/codemodel.iws
+
+# /tags/2.4.1/codemodel-annotation-compiler/
+/tags/2.4.1/codemodel-annotation-compiler/target
+/tags/2.4.1/codemodel-annotation-compiler/velocity.log
+/tags/2.4.1/codemodel-annotation-compiler/*.iml
+
+# /tags/2.5/
+/tags/2.5/target
+/tags/2.5/velocity.log
+/tags/2.5/*.iws
+/tags/2.5/.DS_Store
+/tags/2.5/*.iml
+/tags/2.5/*.ipr
+
+# /tags/2.5/codemodel/
+/tags/2.5/codemodel/target
+/tags/2.5/codemodel/*.iml
+/tags/2.5/codemodel/codemodel.ipr
+/tags/2.5/codemodel/codemodel.iws
+
+# /tags/2.5/codemodel-annotation-compiler/
+/tags/2.5/codemodel-annotation-compiler/target
+/tags/2.5/codemodel-annotation-compiler/velocity.log
+/tags/2.5/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-12/
+/tags/codemodel-12/target
+/tags/codemodel-12/velocity.log
+/tags/codemodel-12/*.iws
+/tags/codemodel-12/.DS_Store
+/tags/codemodel-12/*.iml
+/tags/codemodel-12/*.ipr
+
+# /tags/codemodel-12/codemodel/
+/tags/codemodel-12/codemodel/target
+/tags/codemodel-12/codemodel/*.iml
+/tags/codemodel-12/codemodel/codemodel.ipr
+/tags/codemodel-12/codemodel/codemodel.iws
+
+# /tags/codemodel-12/codemodel-annotation-compiler/
+/tags/codemodel-12/codemodel-annotation-compiler/target
+/tags/codemodel-12/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-12/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-2.0/
+/tags/codemodel-2.0/target
+/tags/codemodel-2.0/velocity.log
+/tags/codemodel-2.0/*.iws
+/tags/codemodel-2.0/.DS_Store
+/tags/codemodel-2.0/*.iml
+/tags/codemodel-2.0/*.ipr
+
+# /tags/codemodel-2.0/codemodel/
+/tags/codemodel-2.0/codemodel/target
+/tags/codemodel-2.0/codemodel/*.iml
+
+# /tags/codemodel-2.0/codemodel-annotation-compiler/
+/tags/codemodel-2.0/codemodel-annotation-compiler/target
+/tags/codemodel-2.0/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-2.0/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-2.1/
+/tags/codemodel-2.1/target
+/tags/codemodel-2.1/velocity.log
+/tags/codemodel-2.1/*.iws
+/tags/codemodel-2.1/.DS_Store
+/tags/codemodel-2.1/*.iml
+/tags/codemodel-2.1/*.ipr
+
+# /tags/codemodel-2.1/codemodel/
+/tags/codemodel-2.1/codemodel/target
+/tags/codemodel-2.1/codemodel/*.iml
+/tags/codemodel-2.1/codemodel/codemodel.ipr
+/tags/codemodel-2.1/codemodel/codemodel.iws
+
+# /tags/codemodel-2.1/codemodel-annotation-compiler/
+/tags/codemodel-2.1/codemodel-annotation-compiler/target
+/tags/codemodel-2.1/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-2.1/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-after-issue-7/
+/tags/codemodel-after-issue-7/target
+/tags/codemodel-after-issue-7/velocity.log
+/tags/codemodel-after-issue-7/*.iws
+/tags/codemodel-after-issue-7/.DS_Store
+/tags/codemodel-after-issue-7/*.iml
+/tags/codemodel-after-issue-7/*.ipr
+
+# /tags/codemodel-after-issue-7/codemodel/
+/tags/codemodel-after-issue-7/codemodel/target
+/tags/codemodel-after-issue-7/codemodel/*.iml
+/tags/codemodel-after-issue-7/codemodel/codemodel.ipr
+/tags/codemodel-after-issue-7/codemodel/codemodel.iws
+
+# /tags/codemodel-after-issue-7/codemodel-annotation-compiler/
+/tags/codemodel-after-issue-7/codemodel-annotation-compiler/target
+/tags/codemodel-after-issue-7/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-after-issue-7/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-after-issue-8/
+/tags/codemodel-after-issue-8/target
+/tags/codemodel-after-issue-8/velocity.log
+/tags/codemodel-after-issue-8/*.iws
+/tags/codemodel-after-issue-8/.DS_Store
+/tags/codemodel-after-issue-8/*.iml
+/tags/codemodel-after-issue-8/*.ipr
+
+# /tags/codemodel-after-issue-8/codemodel/
+/tags/codemodel-after-issue-8/codemodel/target
+/tags/codemodel-after-issue-8/codemodel/*.iml
+/tags/codemodel-after-issue-8/codemodel/codemodel.ipr
+/tags/codemodel-after-issue-8/codemodel/codemodel.iws
+
+# /tags/codemodel-after-issue-8/codemodel-annotation-compiler/
+/tags/codemodel-after-issue-8/codemodel-annotation-compiler/target
+/tags/codemodel-after-issue-8/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-after-issue-8/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-before-issue-7/
+/tags/codemodel-before-issue-7/target
+/tags/codemodel-before-issue-7/velocity.log
+/tags/codemodel-before-issue-7/*.iws
+/tags/codemodel-before-issue-7/.DS_Store
+/tags/codemodel-before-issue-7/*.iml
+/tags/codemodel-before-issue-7/*.ipr
+
+# /tags/codemodel-before-issue-7/codemodel/
+/tags/codemodel-before-issue-7/codemodel/target
+/tags/codemodel-before-issue-7/codemodel/*.iml
+/tags/codemodel-before-issue-7/codemodel/codemodel.ipr
+/tags/codemodel-before-issue-7/codemodel/codemodel.iws
+
+# /tags/codemodel-before-issue-7/codemodel-annotation-compiler/
+/tags/codemodel-before-issue-7/codemodel-annotation-compiler/target
+/tags/codemodel-before-issue-7/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-before-issue-7/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-before-issue-8/
+/tags/codemodel-before-issue-8/target
+/tags/codemodel-before-issue-8/velocity.log
+/tags/codemodel-before-issue-8/*.iws
+/tags/codemodel-before-issue-8/.DS_Store
+/tags/codemodel-before-issue-8/*.iml
+/tags/codemodel-before-issue-8/*.ipr
+
+# /tags/codemodel-before-issue-8/codemodel/
+/tags/codemodel-before-issue-8/codemodel/target
+/tags/codemodel-before-issue-8/codemodel/*.iml
+/tags/codemodel-before-issue-8/codemodel/codemodel.ipr
+/tags/codemodel-before-issue-8/codemodel/codemodel.iws
+
+# /tags/codemodel-before-issue-8/codemodel-annotation-compiler/
+/tags/codemodel-before-issue-8/codemodel-annotation-compiler/target
+/tags/codemodel-before-issue-8/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-before-issue-8/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-project-2.4/
+/tags/codemodel-project-2.4/target
+/tags/codemodel-project-2.4/velocity.log
+/tags/codemodel-project-2.4/*.iws
+/tags/codemodel-project-2.4/.DS_Store
+/tags/codemodel-project-2.4/*.iml
+/tags/codemodel-project-2.4/*.ipr
+
+# /tags/codemodel-project-2.4/codemodel/
+/tags/codemodel-project-2.4/codemodel/target
+/tags/codemodel-project-2.4/codemodel/*.iml
+/tags/codemodel-project-2.4/codemodel/codemodel.ipr
+/tags/codemodel-project-2.4/codemodel/codemodel.iws
+
+# /tags/codemodel-project-2.4/codemodel-annotation-compiler/
+/tags/codemodel-project-2.4/codemodel-annotation-compiler/target
+/tags/codemodel-project-2.4/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-project-2.4/codemodel-annotation-compiler/*.iml
+
+# /tags/codemodel-project-2.6/
+/tags/codemodel-project-2.6/target
+/tags/codemodel-project-2.6/velocity.log
+/tags/codemodel-project-2.6/*.iws
+/tags/codemodel-project-2.6/.DS_Store
+/tags/codemodel-project-2.6/*.iml
+/tags/codemodel-project-2.6/*.ipr
+
+# /tags/codemodel-project-2.6/codemodel/
+/tags/codemodel-project-2.6/codemodel/target
+/tags/codemodel-project-2.6/codemodel/*.iml
+/tags/codemodel-project-2.6/codemodel/codemodel.ipr
+/tags/codemodel-project-2.6/codemodel/codemodel.iws
+
+# /tags/codemodel-project-2.6/codemodel-annotation-compiler/
+/tags/codemodel-project-2.6/codemodel-annotation-compiler/target
+/tags/codemodel-project-2.6/codemodel-annotation-compiler/velocity.log
+/tags/codemodel-project-2.6/codemodel-annotation-compiler/*.iml
+
+# /trunk/codemodel/
+/trunk/codemodel/target
+/trunk/codemodel/velocity.log
+/trunk/codemodel/*.iws
+/trunk/codemodel/.DS_Store
+/trunk/codemodel/*.iml
+/trunk/codemodel/*.ipr
+
+# /trunk/codemodel/codemodel/
+/trunk/codemodel/codemodel/target
+/trunk/codemodel/codemodel/*.iml
+/trunk/codemodel/codemodel/codemodel.ipr
+/trunk/codemodel/codemodel/codemodel.iws
+
+# /trunk/codemodel/codemodel-annotation-compiler/
+/trunk/codemodel/codemodel-annotation-compiler/target
+/trunk/codemodel/codemodel-annotation-compiler/velocity.log
+/trunk/codemodel/codemodel-annotation-compiler/*.iml
