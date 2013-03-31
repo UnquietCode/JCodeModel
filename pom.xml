@@ -42,12 +42,12 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.sun.codemodel</groupId>
+    <groupId>unquietcode.tools.jcodemodel</groupId>
     <artifactId>codemodel-project</artifactId>
     <name>Codemodel</name>
     <description>Java source code generation library</description>
     <url>http://codemodel.java.net/</url>
-    <version>2.7-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <parent>
         <groupId>net.java</groupId>
@@ -144,10 +144,6 @@
         <connection>scm:svn:https://svn.java.net/svn/codemodel~svn/trunk/codemodel</connection>
         <url>http://java.net/projects/codemodel/sources/svn/show/trunk</url>
     </scm>
-    <organization>
-        <name>Oracle</name>
-        <url>http://www.oracle.com/</url>
-    </organization>
     <build>
         <plugins>
             <plugin>
@@ -159,20 +155,41 @@
                     <target>1.5</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>2.3</version>
-            </plugin>
+	        <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-source-plugin</artifactId>
+		        <version>2.1.2</version>
+		        <executions>
+			        <execution>
+				        <goals>
+					        <goal>jar</goal>
+				        </goals>
+				        <phase>generate-sources</phase>
+			        </execution>
+		        </executions>
+	        </plugin>
+	        <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-javadoc-plugin</artifactId>
+		        <version>2.8.1</version>
+		        <executions>
+			        <execution>
+				        <goals>
+					        <goal>jar</goal>
+				        </goals>
+				        <phase>generate-sources</phase>
+			        </execution>
+		        </executions>
+	        </plugin>
         </plugins>
     </build>
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.8</version>
-            </plugin>
-        </plugins>
-    </reporting>
+    <!--<reporting>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-javadoc-plugin</artifactId>-->
+                <!--<version>2.8.1</version>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</reporting>-->
 </project>
