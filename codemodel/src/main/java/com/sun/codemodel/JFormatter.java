@@ -539,8 +539,6 @@ public final class JFormatter {
                             return true;    //collision
                     }
                 }
-                if(c.outer()!=null)
-                    return true; // avoid importing inner class to work around 6431987. Also see jaxb issue 166
             }
 
             return false;
