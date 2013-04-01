@@ -36,6 +36,8 @@
 package com.sun.codemodel;
 
 
+import com.sun.codemodel.util.NameUtilities;
+
 import java.lang.annotation.Annotation;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -324,7 +326,7 @@ public final class JAnnotationUse extends JAnnotationValue {
          addValue(name, new JAnnotationStringValue(
         		 new JExpressionImpl() {
         			 public void generate(JFormatter f) {
-        				 f.p(value.getName().replace('$', '.'));
+        				 f.p(NameUtilities.getFullName(value));
         				 f.p(".class");
         			}
         		 }));

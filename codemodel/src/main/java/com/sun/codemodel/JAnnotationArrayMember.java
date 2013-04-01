@@ -41,6 +41,8 @@
 package com.sun.codemodel;
 
 
+import com.sun.codemodel.util.NameUtilities;
+
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
@@ -236,7 +238,7 @@ public final class JAnnotationArrayMember extends JAnnotationValue implements JA
        JAnnotationValue annotationValue = new JAnnotationStringValue(
     		   new JExpressionImpl() {
       			 public void generate(JFormatter f) {
-      				 f.p(value.getName().replace('$', '.'));
+      				 f.p(NameUtilities.getFullName(value));
       				 f.p(".class");
       			}
       		 });

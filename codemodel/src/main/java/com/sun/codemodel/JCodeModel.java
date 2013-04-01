@@ -51,6 +51,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import com.sun.codemodel.util.NameUtilities;
 import com.sun.codemodel.writer.FileCodeWriter;
 import com.sun.codemodel.writer.ProgressCodeWriter;
 
@@ -556,11 +557,11 @@ public final class JCodeModel {
         }
 
         public String name() {
-            return _class.getSimpleName().replace('$','.');
+            return _class.getSimpleName();
         }
 
         public String fullName() {
-            return _class.getName().replace('$','.');
+	        return NameUtilities.getFullName(_class);
         }
 
         public String binaryName() {
