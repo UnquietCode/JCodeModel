@@ -63,7 +63,7 @@ abstract class JGenerifiableImpl implements JGenerifiable, JDeclaration {
                 if(i!=0)    f.p(',');
                 f.d(typeVariables.get(i));
             }
-            f.p('>');
+            f.p(JFormatter.CLOSE_TYPE_ARGS);
         }
     }
 
