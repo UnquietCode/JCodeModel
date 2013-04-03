@@ -807,38 +807,67 @@ public class JDefinedClass
      * prints the body of a class.
      */
     protected void declareBody(JFormatter f) {
-        f.p('{').nl().nl().i();
+        f.p('{').nl().i();
         boolean first = true;
 
         if (!enumConstantsByName.isEmpty()) {
-            for (JEnumConstant c : enumConstantsByName.values()) {
-                if (!first) f.p(',').nl();
+	        for (JEnumConstant c : enumConstantsByName.values()) {
+                if (!first) { f.p(',').nl();}
+		        else { first = false; }
                 f.d(c);
-                first = false;
             }
         	f.p(';').nl();
         }
 
-        for( JFieldVar field : fields.values() )
+        for (JFieldVar field : fields.values()) {
             f.d(field);
-        if (init != null)
-            f.nl().p("static").s(init);
-        if (instanceInit != null)
-            f.nl().s(instanceInit);
-        for (JMethod m : constructors) {
-            f.nl().d(m);
+	        first = false;
         }
-        for (JMethod m : methods) {
-            f.nl().d(m);
-        }
-        if(classes!=null)
-            for (JDefinedClass dc : classes.values())
-                f.nl().d(dc);
 
+	    if (init != null) {
+		    if (!first) { f.nl(); }
+		    else { first = false; }
+            f.p("static").s(init);
+	    }
+
+	    if (instanceInit != null) {
+		    if (!first) { f.nl(); }
+		    else { first = false; }
+            f.s(instanceInit);
+	    }
+
+	    for (JMethod m : constructors) {
+		    if (!first) { f.nl(); }
+		    else { first = false; }
+            f.d(m);
+        }
+
+	    for (JMethod m : methods) {
+		    if (!first) { f.nl(); }
+		    else { first = false; }
+            f.d(m);
+        }
+
+	    if (classes != null) {
+            for (JDefinedClass dc : classes.values()) {
+	            if (!first) { f.nl(); }
+	            else { first = false; }
+                f.d(dc);
+            }
+        }
         
-        if (directBlock != null)
+        if (directBlock != null) {
+	        if (!first) { f.nl(); }
+	        else { first = false; }
             f.p(directBlock);
-        f.nl().o().p('}').nl();
+        }
+
+	    // handle empty classes
+	    if (first) {
+		    f.nl();
+	    }
+
+        f.o().p('}').nl();
     }
 
     /**

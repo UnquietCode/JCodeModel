@@ -172,14 +172,11 @@ public class JDocComment extends JCommentPart implements JGenerable {
     }
 
     public void generate(JFormatter f) {
-        // I realized that we can't use StringTokenizer because
-        // this will recognize multiple \n as one token.
-
         f.p("/**").nl();
 
+	    // prints the main body
         format(f," * ");
 
-        f.p(" * ").nl();
         for (Map.Entry<String,JCommentPart> e : atParams.entrySet()) {
             f.p(" * @param ").p(e.getKey()).nl();
             e.getValue().format(f,INDENT);
