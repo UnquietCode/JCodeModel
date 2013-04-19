@@ -59,6 +59,42 @@ public abstract class JExpr {
         return new JAssignment(lhs, rhs, "+");
     }
 
+	public static JStatement incr(final JExpression expression) {
+		return new JStatement() {
+			public void state(JFormatter f) {
+				JOp.incr(expression).generate(f);
+				f.p(';').nl();
+			}
+		};
+	}
+
+	public static JStatement preincr(final JExpression expression) {
+		return new JStatement() {
+			public void state(JFormatter f) {
+				JOp.preincr(expression).generate(f);
+				f.p(';').nl();
+			}
+		};
+	}
+
+	public static JStatement decr(final JExpression expression) {
+		return new JStatement() {
+			public void state(JFormatter f) {
+				JOp.decr(expression).generate(f);
+				f.p(';').nl();
+			}
+		};
+	}
+
+	public static JStatement predecr(final JExpression expression) {
+		return new JStatement() {
+			public void state(JFormatter f) {
+				JOp.predecr(expression).generate(f);
+				f.p(';').nl();
+			}
+		};
+	}
+
     public static JInvocation _new(JClass c) {
         return new JInvocation(c);
     }
@@ -179,7 +215,7 @@ public abstract class JExpr {
     public static final JExpression FALSE = new JAtom("false");
 
     public static JExpression lit(boolean b) {
-        return b?TRUE:FALSE;
+        return b ? TRUE : FALSE;
     }
     
     public static JExpression lit(int n) {
@@ -297,7 +333,7 @@ public abstract class JExpr {
     public static JExpression direct( final String source ) {
         return new JExpressionImpl(){
             public void generate( JFormatter f ) {
-                    f.p('(').p(source).p(')');
+                f.p('(').p(source).p(')');
             }
         };
     }

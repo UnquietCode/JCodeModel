@@ -69,9 +69,17 @@ public abstract class JExpressionImpl implements JExpression
         return JOp.incr(this);
     }
 
+	public final JExpression preincr() {
+		return JOp.preincr(this);
+	}
+
     public final JExpression decr() {
         return JOp.decr(this);
     }
+
+	public final JExpression predecr() {
+		return JOp.predecr(this);
+	}
 
     public final JExpression plus(JExpression right) {
         return JOp.plus(this, right);

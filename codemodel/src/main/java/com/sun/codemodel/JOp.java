@@ -47,8 +47,7 @@ package com.sun.codemodel;
 
 abstract public class JOp {
 
-    private JOp() {
-    }
+    private JOp() { }
 
 
     /**
@@ -65,11 +64,12 @@ abstract public class JOp {
 
         protected String op;
         protected JExpression e;
-        protected boolean opFirst = true;
+        protected final boolean opFirst;
 
         UnaryOp(String op, JExpression e) {
             this.op = op;
             this.e = e;
+	        opFirst = true;
         }
 
         UnaryOp(JExpression e, String op) {
@@ -84,7 +84,6 @@ abstract public class JOp {
             else
                 f.p('(').g(e).p(op).p(')');
         }
-
     }
 
     public static JExpression minus(JExpression e) {
@@ -110,22 +109,33 @@ abstract public class JOp {
             super(e, op);
         }
 
+	    TightUnaryOp(String op, JExpression e) {
+		    super(op, e);
+	    }
+
         public void generate(JFormatter f) {
             if (opFirst)
                 f.p(op).g(e);
             else
                 f.g(e).p(op);
         }
-
     }
 
     public static JExpression incr(JExpression e) {
         return new TightUnaryOp(e, "++");
     }
 
+	public static JExpression preincr(JExpression e) {
+		return new TightUnaryOp("++", e);
+	}
+
     public static JExpression decr(JExpression e) {
         return new TightUnaryOp(e, "--");
     }
+
+	public static JExpression predecr(JExpression e) {
+		return new TightUnaryOp("--", e);
+	}
 
 
     /* -- Binary operators -- */
