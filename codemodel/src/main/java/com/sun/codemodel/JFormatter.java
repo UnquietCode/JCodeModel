@@ -184,6 +184,8 @@ public final class JFormatter {
             switch (c2) {
             case '{':
             case '}':
+	        case '+':
+	        case '-':
             case '>':
             case '@':
                 return true;

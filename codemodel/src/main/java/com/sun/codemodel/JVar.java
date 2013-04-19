@@ -221,11 +221,23 @@ public class JVar extends JExpressionImpl implements JDeclaration, JAssignmentTa
     }
 
 	
-    public JExpression assign(JExpression rhs) {
+    public JExpressionStatement assign(JExpression rhs) {
 		return JExpr.assign(this,rhs);
     }
-    public JExpression assignPlus(JExpression rhs) {
+
+	public JExpressionStatement assignPlus(JExpression rhs) {
 		return JExpr.assignPlus(this,rhs);
     }
-	
+
+	public JExpressionStatement assignMinus(JExpression rhs) {
+		return JExpr.assignMinus(this,rhs);
+	}
+
+	public JExpressionStatement assignTimes(JExpression rhs) {
+		return JExpr.assignTimes(this,rhs);
+	}
+
+	public JExpressionStatement assignDivide(JExpression rhs) {
+		return JExpr.assignDivide(this,rhs);
+	}
 }

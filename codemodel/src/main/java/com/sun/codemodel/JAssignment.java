@@ -44,7 +44,7 @@ package com.sun.codemodel;
 /**
  * Assignment statements, which are also expressions.
  */
-public class JAssignment extends JExpressionImpl implements JStatement {
+public class JAssignment extends JExpressionImpl implements JExpressionStatement {
 
     JAssignmentTarget lhs;
     JExpression rhs;

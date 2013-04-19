@@ -51,48 +51,40 @@ public abstract class JExpr {
      */
     private JExpr() { }
 
-    public static JExpression assign(JAssignmentTarget lhs, JExpression rhs) {
+    public static JExpressionStatement assign(JAssignmentTarget lhs, JExpression rhs) {
         return new JAssignment(lhs, rhs);
     }
 
-    public static JExpression assignPlus(JAssignmentTarget lhs, JExpression rhs) {
+    public static JExpressionStatement assignPlus(JAssignmentTarget lhs, JExpression rhs) {
         return new JAssignment(lhs, rhs, "+");
     }
 
-	public static JStatement incr(final JExpression expression) {
-		return new JStatement() {
-			public void state(JFormatter f) {
-				JOp.incr(expression).generate(f);
-				f.p(';').nl();
-			}
-		};
+	public static JExpressionStatement assignMinus(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "-");
+	}
+
+	public static JExpressionStatement assignTimes(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "*");
+	}
+
+	public static JExpressionStatement assignDivide(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "/");
+	}
+
+	public static JExpressionStatement incr(final JExpression expression) {
+		return new JExpressionStatementWrapper(JOp.incr(expression));
 	}
 
 	public static JStatement preincr(final JExpression expression) {
-		return new JStatement() {
-			public void state(JFormatter f) {
-				JOp.preincr(expression).generate(f);
-				f.p(';').nl();
-			}
-		};
+		return new JExpressionStatementWrapper(JOp.preincr(expression));
 	}
 
 	public static JStatement decr(final JExpression expression) {
-		return new JStatement() {
-			public void state(JFormatter f) {
-				JOp.decr(expression).generate(f);
-				f.p(';').nl();
-			}
-		};
+		return new JExpressionStatementWrapper(JOp.decr(expression));
 	}
 
 	public static JStatement predecr(final JExpression expression) {
-		return new JStatement() {
-			public void state(JFormatter f) {
-				JOp.predecr(expression).generate(f);
-				f.p(';').nl();
-			}
-		};
+		return new JExpressionStatementWrapper(JOp.predecr(expression));
 	}
 
     public static JInvocation _new(JClass c) {
@@ -337,5 +329,21 @@ public abstract class JExpr {
             }
         };
     }
-}
 
+	static class JExpressionStatementWrapper extends JExpressionImpl implements JExpressionStatement {
+		final JExpression expression;
+
+		JExpressionStatementWrapper(JExpression expression) {
+			this.expression = expression;
+		}
+
+		public void generate(JFormatter f) {
+			expression.generate(f);
+		}
+
+		public void state(JFormatter f) {
+			expression.generate(f);
+			f.p(';').nl();
+		}
+	}
+}
