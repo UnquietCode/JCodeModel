@@ -540,6 +540,18 @@ public final class JFormatter {
                             return true;    //collision
                     }
                 }
+
+	            // if the enclosing class defines a class with the same name, this is
+	            // a collision, since what we really want is some other class
+	            Iterator<JDefinedClass> enclosingOwnedClasses = enclosingClass.classes();
+
+	            while (enclosingOwnedClasses.hasNext()) {
+		            JDefinedClass ownedClass = enclosingOwnedClasses.next();
+
+		            if (c != ownedClass && ownedClass.name().equals(c.name())) {
+			            return true;
+		            }
+	            }
             }
 
             return false;
