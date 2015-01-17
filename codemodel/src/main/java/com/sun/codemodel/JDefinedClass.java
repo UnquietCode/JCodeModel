@@ -867,7 +867,12 @@ public class JDefinedClass
 		    f.nl();
 	    }
 
-        f.o().p('}').nl();
+        f.o().p('}');
+
+		if (!isAnonymous()) {
+			f.nl();
+		}
+
     }
 
     /**
