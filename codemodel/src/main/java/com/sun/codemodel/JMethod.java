@@ -236,14 +236,32 @@ public class JMethod extends JGenerifiableImpl implements JDeclaration, JAnnotat
      *      method signature.
      */
     public JVar varParam(JType type, String name) {
-		if (!hasVarArgs()) {
+		return varParam(JMod.NONE, type, name);
+	}
 
-            varParam =
-				new JVar(
-					JMods.forVar(JMod.NONE),
-					type.array(),
-					name,
-					null);
+	/**
+     * Add the specified variable argument to the list of parameters
+     * for this method signature.
+     *
+	 * @param mods
+	 * 		The modifiers for the variable.
+	 *
+     * @param type
+     *      Type of the parameter being added.
+     *
+     * @param name
+     *      Name of the parameter being added
+     *
+     * @return the variable parameter
+     *
+     * @throws IllegalStateException
+     *      If this method is called twice.
+     *      varargs in J2SE 1.5 can appear only once in the
+     *      method signature.
+     */
+	public JVar varParam(int mods, JType type, String name) {
+		if (!hasVarArgs()) {
+            varParam = new JVar(JMods.forVar(mods), type.array(), name, null);
 			return varParam;
 		} else {
 			throw new IllegalStateException(
@@ -425,23 +443,30 @@ public class JMethod extends JGenerifiableImpl implements JDeclaration, JAnnotat
         // declare the generics parameters
 		super.declare(f);
 
-		if (!isConstructor())
+		if (!isConstructor()) {
 			f.g(type);
+		}
 		f.id(name).p('(').i();
+
         // when parameters are printed in new lines, we want them to be indented.
         // there's a good chance no newlines happen, too, but just in case it does.
 		boolean first = true;
         for (JVar var : params) {
-            if (!first)
+            if (!first) {
                 f.p(',');
-            if(var.isAnnotated())
+			}
+            if(var.isAnnotated()) {
                 f.nl();
+			}
             f.b(var);
             first = false;
         }
 		if (hasVarArgs()) {
-			if (!first)
+			if (!first) {
 				f.p(',');
+			}
+
+			f.g(varParam.mods());
 			f.g(varParam.type().elementType());
 			f.p("... ");
 			f.id(varParam.name());
