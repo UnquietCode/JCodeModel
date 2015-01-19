@@ -3,7 +3,7 @@ JCodeModel is a fork of the existing Sun codemodel, part of the GlassFish projec
 With java.net in ruins, it seemed liked a good time to fork this project and
 clean it up as well as add some new features (for example, Java 7 syntax).
 
-The current release is `1.0`, and contains several fixes, cosmetic improvements to
+The current release is `1.0.2`, and contains several fixes, cosmetic improvements to
 the output, and some improved functionality for inner classes to support the
 development of [Flapi](https://github.com/UnquietCode/Flapi).
 
@@ -25,6 +25,6 @@ Using Maven-style dependencies & repositories, add this information:
 <dependency>
   <groupId>unquietcode.tools.jcodemodel</groupId>
   <artifactId>codemodel</artifactId>
-  <version>1.0</version>
+  <version>1.0.2</version>
 </dependency>
 ```
