@@ -1,4 +1,7 @@
-#JCodeModel
+#JCodeModel (`v1.0.2`)
+
+[![Tip with Gratipay](https://assets.gratipay.com/gratipay.svg)](https://gratipay.com/UnquietCode) [![Tip with Bitcoin](https://assets.gratipay.com/bitcoin.png)](https://blockchain.info/address/1Ec6mzLpJQvuzXqhxfJz1h9ZwJmoHMW9BX)**Bitcoin**
+
 JCodeModel is a fork of the existing Sun codemodel, part of the GlassFish project.
 With java.net in ruins, it seemed liked a good time to fork this project and
 clean it up as well as add some new features (for example, Java 7 syntax).
