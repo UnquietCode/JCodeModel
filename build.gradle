@@ -1,0 +1,16 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.unquietcode.tools.jcodemodel'
+  version = '1.0.2'
+}
+
+subprojects {
+  repositories {
+    mavenCentral()
+  }
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.3'
+}

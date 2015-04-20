@@ -10,24 +10,23 @@ The current release is `1.0.2`, and contains several fixes, cosmetic improvement
 the output, and some improved functionality for inner classes to support the
 development of [Flapi](https://github.com/UnquietCode/Flapi).
 
-Many thanks to the original contributors, namely Kohsuke.
+Many thanks to the original contributors, namely @Kohsuke.
 
-#Using
-Using Maven-style dependencies & repositories, add this information:
-```
-<repositories>
-  <repository>
-    <id>uqc</id>
-    <name>UnquietCode Repository</name>
-    <url>http://www.unquietcode.com/maven/releases</url>
-  </repository>
-</repositories>
+## Usage
+The dependencies are deployed to Maven Central. To use, add the following to your build script:
 
-...
-
+### Maven
+```xml
 <dependency>
-  <groupId>unquietcode.tools.jcodemodel</groupId>
+  <groupId>com.unquietcode.tools.jcodemodel</groupId>
   <artifactId>codemodel</artifactId>
   <version>1.0.2</version>
 </dependency>
+```
+
+### Gradle
+```groovy
+dependencies {
+  compile 'com.unquietcode.tools.jcodemodel:codemodel:1.0.2'
+}
 ```

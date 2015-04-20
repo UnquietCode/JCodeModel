@@ -1,0 +1,4 @@
+rootProject.name = 'codemodel-project'
+
+include ':codemodel'
+project(':codemodel').projectDir = "$rootDir/codemodel" as File

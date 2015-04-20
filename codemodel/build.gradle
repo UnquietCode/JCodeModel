@@ -1,0 +1,75 @@
+apply plugin: 'java'
+apply plugin: 'signing'
+
+description = 'The core functionality of the CodeModel Java source code generation library'
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+    testCompile group: 'com.google.code.javaparser', name: 'javaparser', version:'1.0.8'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+	classifier = 'javadoc'
+	from javadoc.destinationDir
+}
+
+artifacts {
+	archives sourcesJar
+	archives javadocJar
+}
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+			repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+				authentication(userName: ossrhUsername, password: ossrhPassword)
+			}
+
+			snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+				authentication(userName: ossrhUsername, password: ossrhPassword)
+			}
+
+			pom.project {
+				name 'Codemodel Core'
+				description project.description
+
+				packaging 'jar'
+				url 'https://github.com/UnquietCode/JCodeModel'
+
+				scm {
+					connection 'scm:git:https://github.com/UnquietCode/JCodeModel.git'
+					developerConnection 'scm:git:https://github.com/UnquietCode/JCodeModel.git'
+					url 'https://github.com/UnquietCode/JCodeModel'
+				}
+
+				licenses {
+					license {
+						name 'The Apache License, Version 2.0'
+						url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+					}
+				}
+
+				developers {
+					developer {
+						id 'UnquietCode'
+						name 'Benjamin Fagin'
+						email 'blouis@unquietcode.com'
+					}
+				}
+			}
+		}
+	}
+}
+
+signing {
+	sign configurations.archives
+}
