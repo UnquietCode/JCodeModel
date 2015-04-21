@@ -101,7 +101,9 @@ public final class JCodeModel {
     /** All JReferencedClasses are pooled here. */
     private final HashMap<Class<?>,JReferencedClass> refClasses = new HashMap<Class<?>,JReferencedClass>();
 
-    
+    /** All JDirectClass are pooled here. */
+    private final Map<String,JDirectClass> refDirectClasses = new HashMap<String,JDirectClass>();
+
     /** Obtains a reference to the special "null" type. */
     public final JNullType NULL = new JNullType(this);
     // primitive types 
@@ -382,7 +384,12 @@ public final class JCodeModel {
         }
 
         // assume it's not visible to us.
-        return new JDirectClass(this,fullyQualifiedClassName);
+        JDirectClass jdrc = refDirectClasses.get(fullyQualifiedClassName);
+        if (jdrc == null) {
+        	jdrc = new JDirectClass(this,fullyQualifiedClassName);
+        	refDirectClasses.put(fullyQualifiedClassName, jdrc);
+        }
+        return jdrc;
     }
 
     /**
