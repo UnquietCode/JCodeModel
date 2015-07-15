@@ -122,12 +122,12 @@ public interface JExpression extends JGenerable {
     JExpression shl(JExpression right);
 
     /**
-     * Returns "[this]>>[right]"
+     * Returns "[this]&lt;&lt;[right]"
      */
     JExpression shr(JExpression right);
 
     /**
-     * Returns "[this]>>>[right]"
+     * Returns "[this]&lt;&lt;&lt;[right]"
      */
     JExpression shrz(JExpression right);
 

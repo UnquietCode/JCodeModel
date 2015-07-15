@@ -316,7 +316,7 @@ public abstract class JExpr {
      * <p>
      * This method can be used as a short-cut to create a JExpression.
      * For example, instead of <code>_a.gt(_b)</code>, you can write
-     * it as: <code>JExpr.direct("a>b")</code>.
+     * it as: <code>{@code JExpr.direct("a>b")}</code>.
      * 
      * <p>
      * Be warned that there is a danger in using this method,

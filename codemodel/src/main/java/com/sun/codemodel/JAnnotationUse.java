@@ -306,10 +306,10 @@ public final class JAnnotationUse extends JAnnotationValue {
       *  This can be used for e.g to specify
       * <pre>
       *        &#64;XmlCollectionItem(type=Integer.class);
-      * <pre>
-      * For adding a value of Class<? extends Annotation>
-      * @link
-      * #annotationParam(java.lang.String, java.lang.Class<? extends java.lang.annotation.Annotation>)
+      * </pre>
+      * For adding a value of {@code Class<? extends Annotation>}
+      * {@link
+      * #annotationParam(java.lang.String, java.lang.Class)}
       * @param name
       *        The simple name for this annotation param
       *
