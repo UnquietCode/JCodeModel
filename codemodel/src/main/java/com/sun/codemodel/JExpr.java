@@ -70,6 +70,34 @@ public abstract class JExpr {
 	public static JExpressionStatement assignDivide(JAssignmentTarget lhs, JExpression rhs) {
 		return new JAssignment(lhs, rhs, "/");
 	}
+        
+        public static JExpressionStatement assignMod(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "%");
+	}
+        
+        public static JExpressionStatement assignShl(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "<<");
+	}
+        
+        public static JExpressionStatement assignShr(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, ">>");
+	}
+        
+        public static JExpressionStatement assignUshr(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, ">>>");
+	}
+        
+        public static JExpressionStatement assignAnd(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "&");
+	}
+        
+        public static JExpressionStatement assignOr(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "|");
+	}
+        
+        public static JExpressionStatement assignXor(JAssignmentTarget lhs, JExpression rhs) {
+		return new JAssignment(lhs, rhs, "^");
+	}
 
 	public static JExpressionStatement incr(final JExpression expression) {
 		return new JExpressionStatementWrapper(JOp.incr(expression));
