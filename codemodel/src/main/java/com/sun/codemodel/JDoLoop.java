@@ -55,7 +55,7 @@ public class JDoLoop implements JStatement {
     /**
      * JBlock of statements which makes up body of this Do statement
      */
-    private JBlock body = null;
+    private JStatement body = null;
 
     /**
      * Construct a Do statment
@@ -65,14 +65,20 @@ public class JDoLoop implements JStatement {
     }
 
     public JBlock body() {
-        if (body == null) body = new JBlock();
-        return body;
+        if (body == null || !(body instanceof JBlock)) {
+            body = new JBlock();            
+        }
+        return (JBlock) body;
+    }
+    
+    public void setBody(JStatement stmt) {
+        this.body = stmt;
     }
 
     public void state(JFormatter f) {
         f.p("do");
         if (body != null)
-            f.g(body);
+            f.s(body);
         else
             f.p("{ }");
 

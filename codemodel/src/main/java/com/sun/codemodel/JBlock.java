@@ -41,8 +41,8 @@
 package com.sun.codemodel;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * A block of Java code, which may contain statements and local declarations.
@@ -66,6 +66,7 @@ public final class JBlock implements JGenerable, JStatement {
      */
     private boolean bracesRequired = true;
     private boolean indentRequired = true;
+    private boolean newlineRequired = true;
 
     /**
      * Current position.
@@ -73,12 +74,21 @@ public final class JBlock implements JGenerable, JStatement {
     private int pos;
 
     public JBlock() {
-        this(true,true);
+        this(true, true, true);
     }
 
     public JBlock(boolean bracesRequired, boolean indentRequired) {
+        this(bracesRequired, indentRequired, true);
+    }
+    
+    public JBlock(boolean bracesRequired, boolean indentRequired, boolean newlineRequired) {
         this.bracesRequired = bracesRequired;
         this.indentRequired = indentRequired;
+        this.newlineRequired = newlineRequired;
+    }
+    
+    public void setNewlineRequired(boolean val) {
+        this.newlineRequired = val;
     }
 
     /**
@@ -402,9 +412,16 @@ public final class JBlock implements JGenerable, JStatement {
      */
     public JBlock block() {
         JBlock b = new JBlock();
-        b.bracesRequired = false;
-        b.indentRequired = false;
+        // why false? of course they are both required
+//        b.bracesRequired = false;
+//        b.indentRequired = false;
         return insert(b);
+    }
+    
+    public JSynchronized _synchronized(JExpression lock) {
+        JSynchronized syn = new JSynchronized(lock);
+        insert(syn);
+        return syn;
     }
 
     /**
@@ -462,7 +479,7 @@ public final class JBlock implements JGenerable, JStatement {
     }
     public void state(JFormatter f) {
         f.g(this);
-        if (bracesRequired)
+        if (newlineRequired)
             f.nl();
     }
 

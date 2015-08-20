@@ -169,6 +169,14 @@ public interface JExpression extends JGenerable {
      * Arguments shall be added to the returned {@link JInvocation} object.
      */
     JInvocation invoke(String method);
+    
+//    /**
+//     * Return [this].new [id]
+//     *
+//     * Arguments shall be added to the returned {@link JInvocation} object.
+//     */
+//    JInvocation _new(String id);
+    
     JFieldRef ref(JVar field);
     JFieldRef ref(String field);
     JArrayCompRef component(JExpression index);

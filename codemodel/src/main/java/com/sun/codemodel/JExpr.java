@@ -102,15 +102,15 @@ public abstract class JExpr {
         return new JExpressionStatementWrapper(JOp.incr(expression));
     }
 
-    public static JStatement preincr(final JExpression expression) {
+    public static JExpressionStatement preincr(final JExpression expression) {
         return new JExpressionStatementWrapper(JOp.preincr(expression));
     }
 
-    public static JStatement decr(final JExpression expression) {
+    public static JExpressionStatement decr(final JExpression expression) {
         return new JExpressionStatementWrapper(JOp.decr(expression));
     }
 
-    public static JStatement predecr(final JExpression expression) {
+    public static JExpressionStatement predecr(final JExpression expression) {
         return new JExpressionStatementWrapper(JOp.predecr(expression));
     }
 
@@ -178,6 +178,20 @@ public abstract class JExpr {
                     c = cl;
                 }
                 f.g(c).p(".this");
+            }
+        };
+    }
+    
+    public static JExpression dotsuper(final JClass cl) {
+        return new JExpressionImpl() {
+            public void generate(JFormatter f) {
+                JClass c;
+                if (cl instanceof JNarrowedClass) {
+                    c = ((JNarrowedClass) cl).basis;
+                } else {
+                    c = cl;
+                }
+                f.g(c).p(".super");
             }
         };
     }

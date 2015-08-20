@@ -37,19 +37,19 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-
 package com.sun.codemodel;
 
 /**
  * Provides default implementations for {@link JExpression}.
  */
-public abstract class JExpressionImpl implements JExpression
-{
+public abstract class JExpressionImpl implements JExpression {
+
     //
     //
     // from JOp
     //
     //
+
     public final JExpression minus() {
         return JOp.minus(this);
     }
@@ -69,17 +69,17 @@ public abstract class JExpressionImpl implements JExpression
         return JOp.incr(this);
     }
 
-	public final JExpression preincr() {
-		return JOp.preincr(this);
-	}
+    public final JExpression preincr() {
+        return JOp.preincr(this);
+    }
 
     public final JExpression decr() {
         return JOp.decr(this);
     }
 
-	public final JExpression predecr() {
-		return JOp.predecr(this);
-	}
+    public final JExpression predecr() {
+        return JOp.predecr(this);
+    }
 
     public final JExpression plus(JExpression right) {
         return JOp.plus(this, right);
