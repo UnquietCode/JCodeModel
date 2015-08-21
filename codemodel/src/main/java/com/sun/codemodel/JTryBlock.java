@@ -50,6 +50,7 @@ import java.util.List;
 
 public class JTryBlock implements JStatement {
 
+    private List<JVar> resources = new ArrayList<JVar>();
     private JBlock body = new JBlock();
     private List<CatchBlock> catches = new ArrayList<CatchBlock>();
     private JBlock _finally = null;
@@ -59,6 +60,12 @@ public class JTryBlock implements JStatement {
 
     public JBlock body() {
         return body;
+    }
+    
+    public JVar resource(int mods, JType type, String id, JExpression init) {
+        JVar var = new JVar(JMods.forVar(mods), type, id, init);
+        resources.add(var);
+        return var;
     }
 
     public JCatchBlock _catch(JClass exception) {
@@ -79,7 +86,15 @@ public class JTryBlock implements JStatement {
     }
 
     public void state(JFormatter f) {
-        f.p("try").g(body);
+        f.p("try");
+        if (!resources.isEmpty()) {
+            f.p("(");
+            for (JVar var : resources) {
+                f.b(var).p(";").nl();
+            }
+            f.p(")");
+        }
+        f.g(body);
         for (CatchBlock cb : catches)
             f.g(cb);
         if (_finally != null)
