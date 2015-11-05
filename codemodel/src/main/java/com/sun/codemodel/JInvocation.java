@@ -37,12 +37,10 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */
-
 package com.sun.codemodel;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * JMethod invocation
@@ -57,9 +55,11 @@ public final class JInvocation extends JExpressionImpl implements JStatement {
 
     /**
      * Name of the method to be invoked.
-     * Either this field is set, or {@link #method}, or {@link #type} (in which case it's a
+     * Either this field is set, or {@link #method}, or {@link #type} (in which
+     * case it's a
      * constructor invocation.)
-     * This allows {@link JMethod#name(String) the name of the method to be changed later}.
+     * This allows
+     * {@link JMethod#name(String) the name of the method to be changed later}.
      */
     private String name;
 
@@ -81,53 +81,58 @@ public final class JInvocation extends JExpressionImpl implements JStatement {
      * Invokes a method on an object.
      *
      * @param object
-     *        JExpression for the object upon which
-     *        the named method will be invoked,
-     *        or null if none
+     * JExpression for the object upon which
+     * the named method will be invoked,
+     * or null if none
      *
      * @param name
-     *        Name of method to invoke
+     * Name of method to invoke
      */
     JInvocation(JExpression object, String name) {
-        this( (JGenerable)object, name );
+        this((JGenerable) object, name);
     }
 
     JInvocation(JExpression object, JMethod method) {
-        this( (JGenerable)object, method );
+        this((JGenerable) object, method);
     }
-    
+
     /**
      * Invokes a static method on a class.
      */
     JInvocation(JClass type, String name) {
-        this( (JGenerable)type, name );
+        this((JGenerable) type, name);
     }
 
     JInvocation(JClass type, JMethod method) {
-        this( (JGenerable)type, method );
+        this((JGenerable) type, method);
     }
 
     private JInvocation(JGenerable object, String name) {
         this.object = object;
-        if (name.indexOf('.') >= 0)
+        if (name.indexOf('.') >= 0) {
             throw new IllegalArgumentException("method name contains '.': " + name);
+        }
         this.name = name;
     }
 
     private JInvocation(JGenerable object, JMethod method) {
         this.object = object;
-        this.method =method;
+        this.method = method;
+    }
+    
+    public static JInvocation invokeOn(JGenerable object, String name) {
+        return new JInvocation(object, name);
     }
 
     /**
      * Invokes a constructor of an object (i.e., creates
      * a new object.)
-     * 
+     * <p>
      * @param c
-     *      Type of the object to be created. If this type is
-     *      an array type, added arguments are treated as array
-     *      initializer. Thus you can create an expression like
-     *      <code>new int[]{1,2,3,4,5}</code>.
+     * Type of the object to be created. If this type is
+     * an array type, added arguments are treated as array
+     * initializer. Thus you can create an expression like
+     * <code>new int[]{1,2,3,4,5}</code>.
      */
     JInvocation(JType c) {
         this.isConstructor = true;
@@ -135,13 +140,15 @@ public final class JInvocation extends JExpressionImpl implements JStatement {
     }
 
     /**
-     *  Add an expression to this invocation's argument list
+     * Add an expression to this invocation's argument list
      *
      * @param arg
-     *        Argument to add to argument list
+     * Argument to add to argument list
      */
     public JInvocation arg(JExpression arg) {
-        if(arg==null)   throw new IllegalArgumentException();
+        if (arg == null) {
+            throw new IllegalArgumentException();
+        }
         args.add(arg);
         return this;
     }
@@ -154,43 +161,48 @@ public final class JInvocation extends JExpressionImpl implements JStatement {
     public JInvocation arg(String v) {
         return arg(JExpr.lit(v));
     }
-    
-	/**
-	 * Returns all arguments of the invocation.
-	 * @return
-	 *      If there's no arguments, an empty array will be returned.
-	 */
-	public JExpression[] listArgs() {
-		return args.toArray(new JExpression[args.size()]);
-	}
+
+    /**
+     * Returns all arguments of the invocation.
+     * <p>
+     * @return
+     * If there's no arguments, an empty array will be returned.
+     */
+    public JExpression[] listArgs() {
+        return args.toArray(new JExpression[args.size()]);
+    }
 
     public void generate(JFormatter f) {
         if (isConstructor && type.isArray()) {
             // [RESULT] new T[]{arg1,arg2,arg3,...};
             f.p("new").g(type).p('{');
         } else {
-            if (isConstructor)
+            if (isConstructor) {
                 f.p("new").g(type).p('(');
-            else {
+            } else {
                 String name = this.name;
-                if(name==null)  name=this.method.name();
+                if (name == null) {
+                    name = this.method.name();
+                }
 
-                if (object != null)
+                if (object != null) {
                     f.g(object).p('.').p(name).p('(');
-                else
+                } else {
                     f.id(name).p('(');
+                }
             }
         }
-                
+
         f.g(args);
 
-        if (isConstructor && type.isArray())
+        if (isConstructor && type.isArray()) {
             f.p('}');
-        else 
+        } else {
             f.p(')');
-            
-        if( type instanceof JDefinedClass && ((JDefinedClass)type).isAnonymous() ) {
-            ((JAnonymousClass)type).declareBody(f);
+        }
+
+        if (type instanceof JDefinedClass && ((JDefinedClass) type).isAnonymous()) {
+            ((JAnonymousClass) type).declareBody(f);
         }
     }
 

@@ -178,7 +178,7 @@ public abstract class JType implements JGenerable, Comparable<JType> {
      * Compare two JTypes by FQCN, giving sorting precedence to types
      * that belong to packages java and javax over all others.
      *
-     * This method is used to sort generated import statments in a
+     * This method is used to sort generated import statements in a
      * conventional way for readability.
      */
     public int compareTo(JType o) {

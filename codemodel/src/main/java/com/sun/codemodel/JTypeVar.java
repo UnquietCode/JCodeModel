@@ -133,4 +133,9 @@ public final class JTypeVar extends JClass implements JDeclaration {
     public void generate(JFormatter f) {
         f.id(name);
     }
+
+    @Override
+    public JClass inner(String name) {
+        return null;
+    }
 }

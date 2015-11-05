@@ -42,16 +42,16 @@ package com.sun.codemodel;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 
 /**
  * Variables and fields.
  */
 
-public class JVar extends JExpressionImpl implements JDeclaration, JAssignmentTarget, JAnnotatable {
+public class JVar extends JExpressionImpl implements JField, JDeclaration, JAnnotatable {
 
     /**
      * Modifiers.

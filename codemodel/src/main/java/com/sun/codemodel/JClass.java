@@ -83,6 +83,8 @@ public abstract class JClass extends JType {
     public JClass outer() {
         return null;
     }
+    
+    public abstract JClass inner(String name);
 
     private final JCodeModel _owner;
 

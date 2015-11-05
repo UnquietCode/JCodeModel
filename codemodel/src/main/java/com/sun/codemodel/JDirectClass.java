@@ -40,9 +40,9 @@
 
 package com.sun.codemodel;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Collections;
 
 /**
  * A special {@link JClass} that represents an unknown class (except its name.)
@@ -57,6 +57,7 @@ final class JDirectClass extends JClass {
     public JDirectClass(JCodeModel _owner,String fullName) {
         super(_owner);
         this.fullName = fullName;
+        throw new RuntimeException("Stop using this it fucks up imports!");
     }
 
     public String name() {
@@ -93,5 +94,10 @@ final class JDirectClass extends JClass {
 
     protected JClass substituteParams(JTypeVar[] variables, List<JClass> bindings) {
         return this;
+    }
+
+    @Override
+    public JClass inner(String name) {
+        return new JDirectClass(owner(), fullName()+"."+name);
     }
 }

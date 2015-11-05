@@ -370,6 +370,9 @@ public abstract class JExpr {
      * as it obfuscates the object model.
      */
     public static JExpression direct(final String source) {
+        if ((source == null) || source.isEmpty()) {
+            throw new RuntimeException("DUDE!");
+        }
         return new JExpressionImpl() {
             public void generate(JFormatter f) {
                 f.p('(').p(source).p(')');

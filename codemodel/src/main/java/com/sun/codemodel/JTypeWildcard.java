@@ -128,4 +128,9 @@ final class JTypeWildcard extends JClass {
             f.p("? extends").g(bound);
         }
     }
+
+    @Override
+    public JClass inner(String name) {
+        return null;
+    }
 }

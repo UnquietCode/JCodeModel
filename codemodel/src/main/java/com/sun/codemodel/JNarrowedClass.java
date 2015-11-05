@@ -274,4 +274,9 @@ class JNarrowedClass extends JClass {
         }
         return args;
     }
+
+    @Override
+    public JClass inner(String name) {
+        return owner().ref(fullName()+"."+name);
+    }
 }
