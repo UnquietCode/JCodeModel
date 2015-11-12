@@ -15,6 +15,7 @@ public class JMultiCatchBlock implements JTryBlock.CatchBlock {
     private final String var;
     private final JClass[] exceptions;
     private JBlock body = new JBlock();
+    private JVar variable = null;
     
     JMultiCatchBlock(JMods mods, String name, JClass... exceptions) {
         this.mods = mods;
@@ -24,6 +25,13 @@ public class JMultiCatchBlock implements JTryBlock.CatchBlock {
     
     public JBlock body() {
         return body;
+    }
+    
+    public JVar getVar() {
+        if (variable == null) {
+            variable = new JVar(mods, exceptions[0], var, null);
+        }
+        return variable;
     }
     
     public void generate(JFormatter f) {
