@@ -76,4 +76,9 @@ public final class JNullType extends JClass {
     protected JClass substituteParams(JTypeVar[] variables, List<JClass> bindings) {
         return this;
     }
+
+    @Override
+    public JClass inner(String name) {
+        return null; // this doesn't make sense^^
+    }
 }

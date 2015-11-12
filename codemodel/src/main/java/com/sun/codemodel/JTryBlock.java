@@ -50,8 +50,9 @@ import java.util.List;
 
 public class JTryBlock implements JStatement {
 
+    private List<JVar> resources = new ArrayList<JVar>();
     private JBlock body = new JBlock();
-    private List<JCatchBlock> catches = new ArrayList<JCatchBlock>();
+    private List<CatchBlock> catches = new ArrayList<CatchBlock>();
     private JBlock _finally = null;
 
     JTryBlock() {
@@ -60,9 +61,21 @@ public class JTryBlock implements JStatement {
     public JBlock body() {
         return body;
     }
+    
+    public JVar resource(int mods, JType type, String id, JExpression init) {
+        JVar var = new JVar(JMods.forVar(mods), type, id, init);
+        resources.add(var);
+        return var;
+    }
 
     public JCatchBlock _catch(JClass exception) {
         JCatchBlock cb = new JCatchBlock(exception);
+        catches.add(cb);
+        return cb;
+    }
+    
+    public JMultiCatchBlock _catch(int mods, String var, JClass... exception) {
+        JMultiCatchBlock cb = new JMultiCatchBlock(JMods.forVar(mods), var, exception);
         catches.add(cb);
         return cb;
     }
@@ -73,12 +86,23 @@ public class JTryBlock implements JStatement {
     }
 
     public void state(JFormatter f) {
-        f.p("try").g(body);
-        for (JCatchBlock cb : catches)
+        f.p("try");
+        if (!resources.isEmpty()) {
+            f.p("(");
+            for (JVar var : resources) {
+                f.b(var).p(";").nl();
+            }
+            f.p(")");
+        }
+        f.g(body);
+        for (CatchBlock cb : catches)
             f.g(cb);
         if (_finally != null)
             f.p("finally").g(_finally);
         f.nl();
     }
 
+    
+    public static interface CatchBlock extends JGenerable {}
+    
 }

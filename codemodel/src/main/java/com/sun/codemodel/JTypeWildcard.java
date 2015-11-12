@@ -44,12 +44,10 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Represents a wildcard type like "? extends Foo".
+ * Represents a wildcard type like "? extends Foo" or "? super Foo".
  *
  * <p>
  * Instances of this class can be obtained from {@link JClass#wildcard()}
- *
- * TODO: extend this to cover "? super Integer".
  *
  * <p>
  * Our modeling of types are starting to look really ugly.
@@ -61,18 +59,24 @@ import java.util.List;
 final class JTypeWildcard extends JClass {
 
     private final JClass bound;
+    private final boolean _super;
 
-    JTypeWildcard(JClass bound) {
+    JTypeWildcard(JClass bound, boolean _super) {
         super(bound.owner());
         this.bound = bound;
+        this._super = _super;
+    }
+
+    JTypeWildcard(JClass bound) {
+        this(bound, false);
     }
 
     public String name() {
-        return "? extends "+bound.name();
+        return _super ? "? super " + bound.name() : "? extends " + bound.name();
     }
 
     public String fullName() {
-        return "? extends "+bound.fullName();
+        return _super ? "? super " + bound.fullName() : "? extends " + bound.fullName();
     }
 
     public JPackage _package() {
@@ -116,9 +120,17 @@ final class JTypeWildcard extends JClass {
     }
 
     public void generate(JFormatter f) {
-        if(bound._extends()==null)
-            f.p("?");   // instead of "? extends Object"
-        else
+        if (_super) {
+            f.p("? super").g(bound);
+        } else if(bound._extends()==null) {
+             f.p("?");   // instead of "? extends Object"
+        } else {
             f.p("? extends").g(bound);
+        }
+    }
+
+    @Override
+    public JClass inner(String name) {
+        return null;
     }
 }

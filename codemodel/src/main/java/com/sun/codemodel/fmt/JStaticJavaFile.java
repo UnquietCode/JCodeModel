@@ -40,6 +40,10 @@
 
 package com.sun.codemodel.fmt;
 
+import com.sun.codemodel.JClass;
+import com.sun.codemodel.JPackage;
+import com.sun.codemodel.JResourceFile;
+import com.sun.codemodel.JTypeVar;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -52,11 +56,6 @@ import java.net.URL;
 import java.text.ParseException;
 import java.util.Iterator;
 import java.util.List;
-
-import com.sun.codemodel.JClass;
-import com.sun.codemodel.JPackage;
-import com.sun.codemodel.JResourceFile;
-import com.sun.codemodel.JTypeVar;
 
 /**
  * Statically generated Java soruce file.
@@ -249,6 +248,11 @@ public final class JStaticJavaFile extends JResourceFile {
 
         protected JClass substituteParams(JTypeVar[] variables, List<JClass> bindings) {
             return this;
+        }
+
+        @Override
+        public JClass inner(String name) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     };
 }

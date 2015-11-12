@@ -53,7 +53,7 @@ public class JForLoop implements JStatement {
     private List<Object> inits = new ArrayList<Object>();
     private JExpression test = null;
     private List<JExpression> updates = new ArrayList<JExpression>();
-    private JBlock body = null;
+    private JStatement body = null;
     
     public JVar init(int mods, JType type, String var, JExpression e) {
         JVar v = new JVar(JMods.forVar(mods), type, var, e);
@@ -69,6 +69,10 @@ public class JForLoop implements JStatement {
         inits.add(JExpr.assign(v, e));
     }
     
+    public void init(JExpression e) {
+        inits.add(e);
+    }
+    
     public void test(JExpression e) {
         this.test = e;
     }
@@ -78,8 +82,14 @@ public class JForLoop implements JStatement {
     }
     
     public JBlock body() {
-        if (body == null) body = new JBlock();
-        return body;
+        if (body == null || !(body instanceof JBlock)) {
+            body = new JBlock();            
+        }
+        return (JBlock) body;
+    }
+    
+    public void setBody(JStatement stmt) {
+        this.body = stmt;
     }
     
     public void state(JFormatter f) {
@@ -95,7 +105,7 @@ public class JForLoop implements JStatement {
         }
         f.p(';').g(test).p(';').g(updates).p(')');
         if (body != null)
-            f.g(body).nl();
+            f.s(body).nl();
         else
             f.p(';').nl();
     }

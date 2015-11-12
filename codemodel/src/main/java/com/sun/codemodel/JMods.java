@@ -59,7 +59,9 @@ public class JMods implements JGenerable {
     private static int CLASS = (JMod.PUBLIC | JMod.PRIVATE | JMod.PROTECTED
             | JMod.STATIC | JMod.FINAL | JMod.ABSTRACT);
     private static int INTERFACE = JMod.PUBLIC;
-    /** bit-packed representation of modifiers. */
+    /**
+     * bit-packed representation of modifiers.
+     */
     private int mods;
 
     private JMods(int mods) {
@@ -107,16 +109,32 @@ public class JMods implements JGenerable {
         return new JMods(mods);
     }
 
+    /**
+     * @deprecated replaced by {@link #is(int)}
+     */
+    @Deprecated
     public boolean isAbstract() {
-        return (mods & JMod.ABSTRACT) != 0;
+        return is(JMod.ABSTRACT);
     }
 
+    /**
+     * @deprecated replaced by {@link #is(int)}
+     */
+    @Deprecated
     public boolean isNative() {
         return (mods & JMod.NATIVE) != 0;
     }
 
+    /**
+     * @deprecated replaced by {@link #is(int)}
+     */
+    @Deprecated
     public boolean isSynchronized() {
         return (mods & JMod.SYNCHRONIZED) != 0;
+    }
+
+    public boolean is(int mod) {
+        return (mods & mod) != 0;
     }
 
     public void setSynchronized(boolean newValue) {
@@ -150,17 +168,37 @@ public class JMods implements JGenerable {
     }
 
     public void generate(JFormatter f) {
-        if ((mods & JMod.PUBLIC) != 0)        f.p("public");
-        if ((mods & JMod.PROTECTED) != 0)     f.p("protected");
-        if ((mods & JMod.PRIVATE) != 0)       f.p("private");
-        if ((mods & JMod.FINAL) != 0)         f.p("final");
-        if ((mods & JMod.STATIC) != 0)        f.p("static");
-        if ((mods & JMod.ABSTRACT) != 0)      f.p("abstract");
-        if ((mods & JMod.NATIVE) != 0)        f.p("native");
-        if ((mods & JMod.SYNCHRONIZED) != 0)  f.p("synchronized");
-        if ((mods & JMod.TRANSIENT) != 0)     f.p("transient");
-        if ((mods & JMod.VOLATILE) != 0)      f.p("volatile");
+        if ((mods & JMod.PUBLIC) != 0) {
+            f.p("public");
         }
+        if ((mods & JMod.PROTECTED) != 0) {
+            f.p("protected");
+        }
+        if ((mods & JMod.PRIVATE) != 0) {
+            f.p("private");
+        }
+        if ((mods & JMod.FINAL) != 0) {
+            f.p("final");
+        }
+        if ((mods & JMod.STATIC) != 0) {
+            f.p("static");
+        }
+        if ((mods & JMod.ABSTRACT) != 0) {
+            f.p("abstract");
+        }
+        if ((mods & JMod.NATIVE) != 0) {
+            f.p("native");
+        }
+        if ((mods & JMod.SYNCHRONIZED) != 0) {
+            f.p("synchronized");
+        }
+        if ((mods & JMod.TRANSIENT) != 0) {
+            f.p("transient");
+        }
+        if ((mods & JMod.VOLATILE) != 0) {
+            f.p("volatile");
+        }
+    }
 
     @Override
     public String toString() {

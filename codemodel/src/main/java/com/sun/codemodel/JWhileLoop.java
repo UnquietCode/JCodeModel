@@ -55,7 +55,7 @@ public class JWhileLoop implements JStatement {
     /**
      * JBlock of statements which makes up body of this While statement
      */
-    private JBlock body = null;
+    private JStatement body = null;
 
     /**
      * Construct a While statment
@@ -69,8 +69,14 @@ public class JWhileLoop implements JStatement {
     }
 
     public JBlock body() {
-        if (body == null) body = new JBlock();
-        return body;
+        if (body == null || !(body instanceof JBlock)) {
+            body = new JBlock();            
+        }
+        return (JBlock) body;
+    }
+    
+    public void setBody(JStatement stmt) {
+        this.body = stmt;
     }
 
     public void state(JFormatter f) {

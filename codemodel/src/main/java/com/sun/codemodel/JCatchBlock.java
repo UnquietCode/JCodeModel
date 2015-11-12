@@ -45,15 +45,18 @@ package com.sun.codemodel;
  * Catch block for a try/catch/finally statement
  */
 
-public class JCatchBlock implements JGenerable {
+public class JCatchBlock implements JTryBlock.CatchBlock {
 
     JClass exception;
     private JVar var = null;
     private JBlock body = new JBlock();
+    private boolean isMulti = false;
 
     JCatchBlock(JClass exception) {
         this.exception = exception;
     }
+    
+    
 
     public JVar param(String name) {
         if (var != null) throw new IllegalStateException();

@@ -143,7 +143,7 @@ public class JDefinedClass
      *  or enum
      * 
      */
-    private final ClassType classType;
+    private ClassType classType;
     
     /** List containing the enum value declarations
      *  
@@ -668,9 +668,9 @@ public class JDefinedClass
         throws JClassAlreadyExistsException {
 
         String NAME;
-        if (JCodeModel.isCaseSensitiveFileSystem)
-            NAME = name.toUpperCase();
-        else
+//        if (JCodeModel.isCaseSensitiveFileSystem)
+//            NAME = name.toUpperCase();
+//        else
             NAME = name;
 
         if (getClasses().containsKey(NAME))
@@ -754,7 +754,7 @@ public class JDefinedClass
             return classes.values().iterator();
     }
 
-    private Map<String,JDefinedClass> getClasses() {
+    public Map<String,JDefinedClass> getClasses() {
         if(classes==null)
             classes = new TreeMap<String,JDefinedClass>();
         return classes;
@@ -960,5 +960,21 @@ public class JDefinedClass
      */
     public JMods mods() {
         return mods;
+    }
+    
+    public void setMods(int mods) {
+        if (isInterface())
+            this.mods = JMods.forInterface(mods);
+        else
+            this.mods = JMods.forClass(mods);
+    }
+    
+    public void setType(ClassType type) {
+        this.classType = type;
+    }
+
+    @Override
+    public JClass inner(String name) {
+        return getClasses().get(name);
     }
 }

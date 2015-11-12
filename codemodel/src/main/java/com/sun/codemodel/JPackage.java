@@ -49,6 +49,8 @@ import java.io.PrintWriter;
 import java.io.Writer;
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -56,8 +58,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-import java.util.Collection;
-import java.util.Collections;
 
 
 /**
@@ -119,9 +119,9 @@ public final class JPackage implements JDeclaration, JGenerable, JClassContainer
             throw new IllegalArgumentException(msg);
         }
         
-        if(JCodeModel.isCaseSensitiveFileSystem)
-            upperCaseClassMap = null;
-        else
+//        if(JCodeModel.isCaseSensitiveFileSystem)
+//            upperCaseClassMap = null;
+//        else
             upperCaseClassMap = new HashMap<String,JDefinedClass>();
         
         this.name = name;

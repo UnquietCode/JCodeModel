@@ -480,6 +480,13 @@ public final class JFormatter {
             if(clazz.outer()==null) {
                 return true;    // no need to explicitly import a class into itself
             }
+            JClass curC = clazz; 
+            while (curC.outer() != null) { // check for myself in the class hierarchy
+                if (curC.outer().compareTo(clazz) == 0) {
+                    return true; // don't import my own children
+                }
+                curC = curC.outer();
+            }
         }
         return false;
     }

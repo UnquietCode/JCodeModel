@@ -40,8 +40,8 @@
 
 package com.sun.codemodel;
 
-import java.util.Iterator;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -133,6 +133,11 @@ final class JArrayClass extends JClass {
             return this;
         
         return new JArrayClass(owner(),c);
+    }
+
+    @Override
+    public JClass inner(String name) {
+        return null;
     }
 
 }

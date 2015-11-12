@@ -243,3 +243,7 @@
 /trunk/codemodel/codemodel-annotation-compiler/target
 /trunk/codemodel/codemodel-annotation-compiler/velocity.log
 /trunk/codemodel/codemodel-annotation-compiler/*.iml
+
+.gradle/
+codemodel/build/
+codemodel/target/

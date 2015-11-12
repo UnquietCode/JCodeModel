@@ -45,7 +45,7 @@ package com.sun.codemodel;
  * Field Reference
  */
 
-public class JFieldRef extends JExpressionImpl implements JAssignmentTarget {
+public class JFieldRef extends JExpressionImpl implements JField {
     /**
      * Object expression upon which this field will be accessed, or
      * null for the implicit 'this'.
