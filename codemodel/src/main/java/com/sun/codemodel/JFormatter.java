@@ -40,8 +40,6 @@
 
 package com.sun.codemodel;
 
-import com.sun.org.apache.xml.internal.security.encryption.ReferenceList;
-
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.ArrayList;
@@ -479,20 +477,22 @@ public final class JFormatter {
             // inner classes require an import stmt.
             // All other pkg local classes do not need an
             // import stmt for ref.
+
             // no need to explicitly import a class into itself
-            return clazz.outer() == null || isInnerClass(clazz, c);
+            return isNestedInSelf(clazz, c);
         }
         return false;
     }
 
-    private boolean isInnerClass(JClass clazz, JClass c){
-        if(clazz.outer() == null){
-            return false;
-        }
-        else if(clazz.outer().equals(c)){
-            return true;
-        }
-        return isInnerClass(clazz.outer(), c);
+    private static boolean isNestedInSelf(JClass clazz, JClass c) {
+		while (clazz != null) {
+			if (clazz.equals(c)) {
+				return true;
+			}
+			clazz = clazz.outer();
+		}
+
+   		return false;
     }
 
     private JPackage javaLang;
