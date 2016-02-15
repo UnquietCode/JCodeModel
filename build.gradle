@@ -2,7 +2,7 @@ allprojects  {
   apply plugin: 'maven'
 
   group = 'com.unquietcode.tools.jcodemodel'
-  version = '1.0.3'
+  version = '1.0.4'
 }
 
 subprojects {
