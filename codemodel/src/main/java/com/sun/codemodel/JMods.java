@@ -164,7 +164,7 @@ public class JMods implements JGenerable {
         if ((mods & JMod.SYNCHRONIZED) != 0)  f.p("synchronized");
         if ((mods & JMod.TRANSIENT) != 0)     f.p("transient");
         if ((mods & JMod.VOLATILE) != 0)      f.p("volatile");
-        if ((mods & JMod.DEFAULT) != 0)      f.p("default");
+        if ((mods & JMod.DEFAULT) != 0)       f.p("default");
         }
 
     @Override
