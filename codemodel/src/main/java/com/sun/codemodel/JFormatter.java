@@ -442,8 +442,13 @@ public final class JFormatter {
                 if (clazz instanceof JNarrowedClass) {
                     clazz = clazz.erasure();
                 }
-                
-                p("import").p(clazz.fullName()).p(';').nl();
+
+                String fullName = clazz.fullName();
+                int indexOfLt = fullName.indexOf('<');
+                if(indexOfLt > 1){
+                    fullName = fullName.substring(0, indexOfLt);
+                }
+                p("import").p(fullName).p(';').nl();
             }
         }
         nl();
