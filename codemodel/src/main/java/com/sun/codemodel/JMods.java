@@ -55,7 +55,7 @@ public class JMods implements JGenerable {
             | JMod.STATIC | JMod.FINAL
             | JMod.TRANSIENT | JMod.VOLATILE);
     private static int METHOD = (JMod.PUBLIC | JMod.PRIVATE | JMod.PROTECTED | JMod.FINAL
-            | JMod.ABSTRACT | JMod.STATIC | JMod.NATIVE | JMod.SYNCHRONIZED);
+            | JMod.ABSTRACT | JMod.STATIC | JMod.NATIVE | JMod.SYNCHRONIZED | JMod.DEFAULT);
     private static int CLASS = (JMod.PUBLIC | JMod.PRIVATE | JMod.PROTECTED
             | JMod.STATIC | JMod.FINAL | JMod.ABSTRACT);
     private static int INTERFACE = JMod.PUBLIC;
@@ -145,6 +145,10 @@ public class JMods implements JGenerable {
         setFlag(JMod.FINAL, newValue);
     }
 
+    public void setDefault(boolean newValue) {
+        setFlag(JMod.DEFAULT, newValue);
+    }
+
     private void setFlag(int bit, boolean newValue) {
         mods = (mods & ~bit) | (newValue ? bit : 0);
     }
@@ -160,6 +164,7 @@ public class JMods implements JGenerable {
         if ((mods & JMod.SYNCHRONIZED) != 0)  f.p("synchronized");
         if ((mods & JMod.TRANSIENT) != 0)     f.p("transient");
         if ((mods & JMod.VOLATILE) != 0)      f.p("volatile");
+        if ((mods & JMod.DEFAULT) != 0)       f.p("default");
         }
 
     @Override
